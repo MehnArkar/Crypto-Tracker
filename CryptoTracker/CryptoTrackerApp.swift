@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct CryptoTrackerApp: App {
+    
+    @StateObject private var vm : HomeViewModel = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {  
+                HomeView()
+                    .toolbar(.hidden, for: .navigationBar)
+            }
+            .environmentObject(vm)
         }
     }
 }
