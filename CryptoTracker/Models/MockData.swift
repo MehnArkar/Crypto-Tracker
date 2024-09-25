@@ -179,4 +179,9 @@ class MockData {
                                                                           60355.3951320565]),
                                      priceChangePercentage24HInCurrency: 3.168617571727398,
                                      currentHoldings: 2  )
+    
+    
+    static let stat1 = StatisticModel(title: "Market Cap", value: "$12.5Bn", percentageChange: 25.34)
+    static let stat2 = StatisticModel(title: "Total Volume", value: "$1.23Tr")
+    static let stat3 = StatisticModel(title: "Portfolio Value", value: "$50l.4k", percentageChange: -12.35)
 }
