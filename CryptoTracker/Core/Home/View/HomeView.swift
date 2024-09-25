@@ -23,6 +23,9 @@ struct HomeView: View {
             VStack{
                 homeHeader
                 
+                SearchBarView(searchText: $vm.searchText)
+                    .padding()
+                
                 columnTitles
                 
                 if(!showPortfolio){
