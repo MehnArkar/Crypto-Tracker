@@ -43,7 +43,7 @@ struct SearchBarView: View {
                 
         }
         .font(.headline)
-        .padding(.all,10)
+        .padding()
         .background(
             RoundedRectangle(cornerRadius: 30)
                 .fill(Color.theme.background)
@@ -52,18 +52,18 @@ struct SearchBarView: View {
                     radius: 20
                 )
         )
+        .padding()
+        
     }
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
     SearchBarView(searchText: .constant(""))
-        .padding()
         .colorScheme(.light)
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
     SearchBarView(searchText: .constant(""))
-        .padding()
         .colorScheme(.dark)
 }
 
