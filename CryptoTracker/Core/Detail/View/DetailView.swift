@@ -11,6 +11,7 @@ struct DetailLoadingView : View {
     
     @Binding var coin : CoinModel?
     
+    
     var body: some View {
         ZStack{
             if let coin = coin {
@@ -23,6 +24,7 @@ struct DetailLoadingView : View {
 struct DetailView: View {
     
     @StateObject private  var vm : DetailViewModel
+    @State private var showFullDescription : Bool = false
     
     private let columns : [GridItem] = [
         GridItem(.flexible()),
@@ -42,11 +44,11 @@ struct DetailView: View {
                 
                 VStack(spacing:20){
                     
-                    
                     overviewTitle
                     
-                    
                     Divider()
+                    
+                    descriptionSection
                     
                     overviewGrid
                     
@@ -56,6 +58,7 @@ struct DetailView: View {
                     
                     additionalGrid
                     
+                    websiteSection
                     
                 }
             }
@@ -99,6 +102,35 @@ extension DetailView {
             .padding(.horizontal)
     }
     
+    private var descriptionSection : some View {
+        ZStack{
+            if let coinDecription = vm.coinDescription, !coinDecription.isEmpty {
+                VStack(alignment:.leading){
+                    Text(coinDecription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                    
+                    
+                    Button{
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    }label: {
+                        Text( showFullDescription ? "Less" : "Read more...")
+                            .font(.caption)
+                            .bold()
+                            .padding(.vertical,4)
+                        
+                    }
+                    .accentColor(Color.blue)
+                    
+                }
+                .frame(maxWidth: .infinity)
+            }
+        }
+        .padding(.horizontal)
+    }
+    
     private var additionalTitle : some View {
         Text("Additional Details")
             .font(.title)
@@ -132,5 +164,30 @@ extension DetailView {
             }
         }
         .padding(.horizontal)
+    }
+    
+    private var websiteSection : some View {
+        VStack(alignment: .leading, spacing: 10){
+            
+            if let websiteString = vm.websiteURL,
+               let url = URL(string: websiteString){
+                Link(destination: url){
+                    Text("Website")
+                }
+            }
+            
+            if let websiteString = vm.redditURL,
+               let url = URL(string: websiteString){
+                Link(destination: url){
+                    Text("Reddit")
+                }
+            }
+            
+            
+        }
+        .frame(maxWidth:.infinity, alignment: .leading)
+        .padding(.horizontal)
+        .font(.headline)
+        .accentColor(.blue)
     }
 }
