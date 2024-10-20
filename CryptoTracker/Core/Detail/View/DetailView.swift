@@ -63,6 +63,7 @@ struct DetailView: View {
                 }
             }
         }
+        .background(Color.theme.background.ignoresSafeArea())
         .navigationTitle(vm.coin.name)
         .navigationBarTitleDisplayMode(.large)
         .toolbar {

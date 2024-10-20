@@ -233,12 +233,12 @@
 		69F944872C999E8E00BED3AA /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				69F944882C999E8E00BED3AA /* CryptoTrackerApp.swift */,
 				699398812CA10EFC00059236 /* Utilities */,
 				690AA3B52C9FE669001D2EF8 /* Services */,
 				69F944962C99A2B200BED3AA /* Extensions */,
 				691EF4A22C9AA9F20036BAAC /* Models */,
 				69F944992C99AA6000BED3AA /* Core */,
-				69F944882C999E8E00BED3AA /* CryptoTrackerApp.swift */,
 				69F9448A2C999E8E00BED3AA /* ContentView.swift */,
 				69F9448C2C999E9100BED3AA /* Assets.xcassets */,
 				69F9448E2C999E9100BED3AA /* Preview Content */,

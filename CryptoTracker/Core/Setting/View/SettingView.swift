@@ -18,16 +18,25 @@ struct SettingView: View {
     
     var body: some View {
         NavigationView {
-            List{
-                swiftfullThinkingSection
+            ZStack{
+                Color.theme.background
+                    .ignoresSafeArea()
                 
-                coinGeckoSection
-                
-                developerSection
-                
-                applicationSection
-                
-                
+                List{
+                    swiftfullThinkingSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    
+                    coinGeckoSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    
+                    developerSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    
+                    applicationSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    
+                    
+                }
             }
             .font(.headline)
             .accentColor(.blue)
