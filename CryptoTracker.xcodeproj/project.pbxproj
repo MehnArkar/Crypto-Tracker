@@ -19,6 +19,7 @@
 		69362B9A2CC253310095C793 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69362B992CC253310095C793 /* Date.swift */; };
 		694D8F7A2CC36EF9009A3CBE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D8F792CC36EF9009A3CBE /* String.swift */; };
 		694D8F7E2CC402D1009A3CBE /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D8F7D2CC402D1009A3CBE /* SettingView.swift */; };
+		69566BB82CC5324600283896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69566BB72CC5324600283896 /* LaunchScreen.storyboard */; };
 		697137B72CA69BA2001873D1 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697137B62CA69BA2001873D1 /* CoinLogoView.swift */; };
 		6973A5352CB7A84D0065992A /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A5342CB7A84D0065992A /* CoinDetailModel.swift */; };
 		6973A5372CB7ACFC0065992A /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6973A5362CB7ACFC0065992A /* CoinDetailDataService.swift */; };
@@ -63,6 +64,7 @@
 		69362B992CC253310095C793 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		694D8F792CC36EF9009A3CBE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		694D8F7D2CC402D1009A3CBE /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		69566BB72CC5324600283896 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		697137B62CA69BA2001873D1 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		6973A5342CB7A84D0065992A /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		6973A5362CB7ACFC0065992A /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
@@ -143,6 +145,22 @@
 			isa = PBXGroup;
 			children = (
 				694D8F7D2CC402D1009A3CBE /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69566BB52CC5322700283896 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				69566BB62CC5323300283896 /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		69566BB62CC5323300283896 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69566BB72CC5324600283896 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +267,7 @@
 		69F944992C99AA6000BED3AA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				69566BB52CC5322700283896 /* Launch */,
 				694D8F7B2CC402B4009A3CBE /* Setting */,
 				69F146A42CB6689B0039BBA2 /* Detail */,
 				69F9449F2C99AC0200BED3AA /* Components */,
@@ -364,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69566BB82CC5324600283896 /* LaunchScreen.storyboard in Resources */,
 				69F944902C999E9100BED3AA /* Preview Assets.xcassets in Resources */,
 				69F9448D2C999E9100BED3AA /* Assets.xcassets in Resources */,
 			);
@@ -554,6 +574,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,6 +604,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
